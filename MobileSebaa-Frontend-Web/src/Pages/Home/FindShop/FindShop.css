@@ -1,0 +1,127 @@
+.group8 {
+  filter: drop-shadow(0 0 10px #e14e1d) drop-shadow(0 0 60px #e14e1d);
+}
+
+.group1 {
+  filter: drop-shadow(0 0 10px #0277bd) drop-shadow(0 0 60px #0277bd);
+}
+
+.group2 {
+  filter: drop-shadow(0 0 10px #f0db4f) drop-shadow(0 0 60px #f0db4f);
+}
+
+.group3 {
+  filter: drop-shadow(0 0 10px #7512f7) drop-shadow(0 0 60px #7512f7);
+}
+
+.group4 {
+  filter: drop-shadow(0 0 10px #22bcbc) drop-shadow(0 0 60px #22bcbc);
+}
+
+.group5 {
+  filter: drop-shadow(0 0 10px #81cd39) drop-shadow(0 0 60px #81cd39);
+}
+
+.group6 {
+  filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 60px #ffffff);
+}
+
+.group7 {
+  filter: drop-shadow(0 0 10px #ffcc30) drop-shadow(0 0 60px #ffcc30);
+}
+
+/* .group8 {
+    filter: drop-shadow(0 0 10px #00D8FF) drop-shadow(0 0 60px #00D8FF)
+}
+
+.group9 {
+    filter: drop-shadow(0 0 10px #12924F) drop-shadow(0 0 60px #12924F)
+} */
+
+.shadow1:before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 5%;
+  width: 90%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.item {
+  position: relative;
+  box-shadow: 0.4rem 0.4rem #05060f;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.item .card-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 16px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  border: none;
+  opacity: 0;
+  scale: 0;
+  transform-origin: 0 0;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.item:hover .card-btn {
+  opacity: 1;
+  scale: 1;
+}
+
+.item .card-btn:hover {
+  box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.item .card-btn:active {
+  scale: 0.95;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-45deg, #e729f880 0%, #ff0ff780 100%);
+  transition: transform 0.5s ease;
+}
+
+.item:hover .overlay::after {
+  transform: translate(-50%, -50%) scale(1.1);
+  border-radius: 25px;
+}

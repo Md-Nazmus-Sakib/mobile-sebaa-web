@@ -1,0 +1,483 @@
+.typewriter {
+    --blue: #5C86FF;
+    --blue-dark: #275EFE;
+    --key: #fff;
+    --paper: #EEF0FD;
+    --text: #D3D4EC;
+    --tool: #FBC56C;
+    --duration: 3s;
+    position: relative;
+    -webkit-animation: bounce05 var(--duration) linear infinite;
+    animation: bounce05 var(--duration) linear infinite;
+}
+
+.typewriter .slide {
+    width: 92px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 14px;
+    transform: translateX(14px);
+    background: linear-gradient(var(--blue), var(--blue-dark));
+    -webkit-animation: slide05 var(--duration) ease infinite;
+    animation: slide05 var(--duration) ease infinite;
+}
+
+.typewriter .slide:before,
+.typewriter .slide:after,
+.typewriter .slide i:before {
+    content: "";
+    position: absolute;
+    background: var(--tool);
+}
+
+.typewriter .slide:before {
+    width: 2px;
+    height: 8px;
+    top: 6px;
+    left: 100%;
+}
+
+.typewriter .slide:after {
+    left: 94px;
+    top: 3px;
+    height: 14px;
+    width: 6px;
+    border-radius: 3px;
+}
+
+.typewriter .slide i {
+    display: block;
+    position: absolute;
+    right: 100%;
+    width: 6px;
+    height: 4px;
+    top: 4px;
+    background: var(--tool);
+}
+
+.typewriter .slide i:before {
+    right: 100%;
+    top: -2px;
+    width: 4px;
+    border-radius: 2px;
+    height: 14px;
+}
+
+.typewriter .paper {
+    position: absolute;
+    left: 24px;
+    top: -26px;
+    width: 40px;
+    height: 46px;
+    border-radius: 5px;
+    background: var(--paper);
+    transform: translateY(46px);
+    -webkit-animation: paper05 var(--duration) linear infinite;
+    animation: paper05 var(--duration) linear infinite;
+}
+
+.typewriter .paper:before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 7px;
+    border-radius: 2px;
+    height: 4px;
+    transform: scaleY(0.8);
+    background: var(--text);
+    box-shadow: 0 12px 0 var(--text), 0 24px 0 var(--text), 0 36px 0 var(--text);
+}
+
+.typewriter .keyboard {
+    width: 120px;
+    height: 56px;
+    margin-top: -10px;
+    z-index: 1;
+    position: relative;
+}
+
+.typewriter .keyboard:before,
+.typewriter .keyboard:after {
+    content: "";
+    position: absolute;
+}
+
+.typewriter .keyboard:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    transform: perspective(10px) rotateX(2deg);
+    transform-origin: 50% 100%;
+}
+
+.typewriter .keyboard:after {
+    left: 2px;
+    top: 25px;
+    width: 11px;
+    height: 4px;
+    border-radius: 2px;
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    -webkit-animation: keyboard05 var(--duration) linear infinite;
+    animation: keyboard05 var(--duration) linear infinite;
+}
+
+@keyframes bounce05 {
+
+    85%,
+    92%,
+    100% {
+        transform: translateY(0);
+    }
+
+    89% {
+        transform: translateY(-4px);
+    }
+
+    95% {
+        transform: translateY(2px);
+    }
+}
+
+@keyframes slide05 {
+    5% {
+        transform: translateX(14px);
+    }
+
+    15%,
+    30% {
+        transform: translateX(6px);
+    }
+
+    40%,
+    55% {
+        transform: translateX(0);
+    }
+
+    65%,
+    70% {
+        transform: translateX(-4px);
+    }
+
+    80%,
+    89% {
+        transform: translateX(-12px);
+    }
+
+    100% {
+        transform: translateX(14px);
+    }
+}
+
+@keyframes paper05 {
+    5% {
+        transform: translateY(46px);
+    }
+
+    20%,
+    30% {
+        transform: translateY(34px);
+    }
+
+    40%,
+    55% {
+        transform: translateY(22px);
+    }
+
+    65%,
+    70% {
+        transform: translateY(10px);
+    }
+
+    80%,
+    85% {
+        transform: translateY(0);
+    }
+
+    92%,
+    100% {
+        transform: translateY(46px);
+    }
+}
+
+@keyframes keyboard05 {
+
+    5%,
+    12%,
+    21%,
+    30%,
+    39%,
+    48%,
+    57%,
+    66%,
+    75%,
+    84% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    9% {
+        box-shadow: 15px 2px 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    18% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 2px 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    27% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 12px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    36% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 12px 0 var(--key), 60px 12px 0 var(--key), 68px 12px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    45% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 2px 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    54% {
+        box-shadow: 15px 0 0 var(--key), 30px 2px 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    63% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 12px 0 var(--key);
+    }
+
+    72% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 2px 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+
+    81% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 12px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+}
+
+
+
+/* eye */
+
+#div1 {
+    width: 100%;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes animateHeight {
+    0% {
+        height: 0px;
+    }
+
+    50% {
+        height: 50px;
+    }
+}
+
+#l,
+#m {
+    width: 150px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 0px 200px 0px 200px;
+    -moz-border-radius: 0px 200px 0px 200px;
+    -webkit-border-radius: 0px 200px 0px 200px;
+    border: 1px solid transparent;
+    animation: animateHeight 1s infinite alternate-reverse;
+}
+
+#m {
+    border-radius: 200px 0px 200px 0px;
+    -moz-border-radius: 200px 0px 200px 0px;
+    -webkit-border-radius: 200px 0px 200px 0px;
+}
+
+.pupil,
+.pupl2,
+.pupil3,
+.pupil4,
+.p5 {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.158);
+}
+
+.pupil3,
+.pupil4 {
+    width: 18px;
+    height: 3.5px;
+    overflow: visible;
+}
+
+.pupil {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(rgb(255, 105, 105),
+            rgb(129, 249, 129),
+            rgb(96, 96, 255),
+            rgb(71, 71, 71));
+}
+
+.pupl2 {
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(rgb(255, 2, 2),
+            rgb(0, 255, 0),
+            rgb(0, 0, 255),
+            rgb(0, 0, 0));
+}
+
+.p5 {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(rgb(252, 71, 71),
+            rgb(70, 249, 70),
+            rgb(63, 63, 254),
+            rgb(48, 47, 47));
+}
+
+.pupil3 {
+    width: 5px;
+    height: 18px;
+}
+
+
+
+/* card info */
+
+.contact-card {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(45deg, #00cc0a 25%, #00cc0a 25%, #444 25%, #444 50%, #00cc0a 50%, #00cc0a 75%, #444 75%, #444 100%);
+    animation: animate_6810 15s linear infinite;
+    transition: .3s;
+    background-size: 60px 60px;
+    position: relative;
+    overflow: visible;
+    border-radius: 20px;
+}
+
+.contact-card-info {
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    background-color: rgb(24, 22, 22);
+    border-radius: 20px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+@keyframes animate_6810 {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 1000px;
+    }
+}
+
+
+/* social icon */
+
+.social-card {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    padding: 20px 25px;
+    border-radius: 14px;
+}
+
+.Btn-social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+    z-index: 2;
+}
+
+.BG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 0px;
+}
+
+.facebook .BG {
+    background: #181818;
+}
+
+.instagram .BG {
+    background: #0077b5;
+}
+
+.whatsapp .BG {
+    background: #075e54;
+}
+
+.discord .BG {
+    background: #7289da;
+}
+
+.Btn-social-icon:hover .BG {
+    transform: scale(1.5);
+    /* transform-origin: bottom; */
+    font-size: 20px;
+    color: white;
+}
+
+.Btn-social-icon:hover .svgContainer {
+    border: 1px solid rgba(216, 216, 216, 0.466);
+    background-color: rgba(209, 209, 209, 0.466);
+    backdrop-filter: blur(4px);
+}

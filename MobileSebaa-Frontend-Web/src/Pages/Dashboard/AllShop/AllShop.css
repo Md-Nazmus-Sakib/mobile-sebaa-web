@@ -1,0 +1,11 @@
+.hover-table:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-active {
+    background-color: rgb(242, 0, 190);
+    color: black;
+    padding: 0px, 8px;
+
+}
