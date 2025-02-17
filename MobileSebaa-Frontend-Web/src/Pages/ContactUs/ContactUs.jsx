@@ -104,7 +104,7 @@ const ContactUs = () => (
         imgSrc={emailImg}
         title="By Email"
         description="Contact Us By Email"
-        contactInfo="info@domain.com"
+        contactInfo="mobilesebaa@gmail.com"
       />
 
       <ContactCard
